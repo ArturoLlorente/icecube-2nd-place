@@ -41,3 +41,6 @@ def main():
     config_file_path = args.config_file
     config_data = read_config_file(config_file_path)
     run(config_data)
+
+if __name__ == "__main__":
+    main()

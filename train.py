@@ -85,8 +85,8 @@ def train(config):
     if config["WEIGHTS"]:
         print("Loading weights from ...", config["WEIGHTS"])
         model.load_state_dict(torch.load(config["WEIGHTS"]))
-    model = nn.DataParallel(model)
-    model = model.cuda()
+    #model = nn.DataParallel(model)
+    #model = model.cuda()
     cbs = [
         GradientClip(3.0),
         CSVLogger(),
